@@ -1,0 +1,28 @@
+{
+  "name": "aip-for-osric",
+  "title": "Autocomplete Inline Properties Compatibility for OSRIC",
+  "description": "Adds support for the Autocomplete Inline Properties Add-On for the OSRIC system.",
+  "authors": [
+    {
+      "name": "Sterno",
+      "discord": "Sterno#8208"
+    }
+  ],
+  "url": "https://github.com/drplote/fvtt-autocomplete-for-osric",
+  "readme": "https://github.com/drplote/fvtt-autocomplete-for-osric/raw/main/README.md",
+  "flags": {},
+  "version": "1.0.0",
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
+  "system": "osric",
+  "scripts": [],
+  "esmodules": [
+    "./scripts/aip-osric.js"
+  ],
+  "styles": [],
+  "languages": [],
+  "packs": [],
+  "dependencies": [],
+  "manifest": "https://github.com/drplote/fvtt-autocomplete-for-osric/releases/latest/download/module.json",
+  "download": "https://github.com/drplote/fvtt-autocomplete-for-osric/releases/download/1.0.0/module.zip"
+}
