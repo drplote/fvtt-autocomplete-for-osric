@@ -6,7 +6,8 @@ export class AutocompleteSupport{
             let config = {
                 packageName: "osric",
                 sheetClasses: [
-                    AutocompleteSupport.createActiveEffectConfigSheetInfo(DATA_MODE)
+                    AutocompleteSupport.createActiveEffectConfigSheetInfo(DATA_MODE),
+                    AutocompleteSupport.createActionSheetInfo(DATA_MODE)
                 ]
             };
         
@@ -15,8 +16,22 @@ export class AutocompleteSupport{
         });
     }
 
+    static createActionSheetInfo(DATA_MODE){
+        return {
+            name: "ActionSheet", 
+            fieldConfigs: [
+                {
+                    selector: `input[type="text"]`, // TODO: narrow this down
+                    showButton: true,
+                    allowHotkey: true,
+                    dataMode: DATA_MODE.CUSTOM, 
+                    customDataGetter: AutocompleteSupport.getEffectFields
+                }
+            ]
+        };
+    }
+
     static createActiveEffectConfigSheetInfo(DATA_MODE){
-        
         return {
             name: "ActiveEffectConfig", 
             fieldConfigs: [
